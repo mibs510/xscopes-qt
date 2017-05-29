@@ -9,7 +9,7 @@ XprotolabInterface::XprotolabInterface(QWidget *parent) :
     QFontDatabase::addApplicationFont(":/Bitmaps/cour.ttf");    
 
     logging=false;
-    logFile=new QFile("log.txt");
+    logFile=new QFile("/var/log/xscopes");
     if (logFile->open(QIODevice::WriteOnly | QIODevice::Text)){
         ts=new QTextStream(logFile);
     }
